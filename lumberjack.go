@@ -212,7 +212,7 @@ func (l *Logger) openNew() error {
 		b := make([]byte, 2048) // adjust buffer size to be larger than expected stack
 		n := runtime.Stack(b, false)
 		s := string(b[:n])
-		return fmt.Errorf("can't make directories for new logfile: %s\n%s", err, s)
+		return fmt.Errorf("can't make directories for new logfile BLAH: %s\n%s", err, s)
 	}
 
 	name := l.filename()
